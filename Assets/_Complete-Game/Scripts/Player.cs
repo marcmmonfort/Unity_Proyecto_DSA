@@ -49,7 +49,7 @@ public class Player : MovingObject
         int horizontal = 0;
         int vertical = 0;
 
-        #if UNITY_STANDALONE || UNITY_WEBPLAYER // Check if we are running either in the Unity editor or in a standalone build.
+        #if UNITY_EDITOR || UNITY_STANDALONE || UNITY_WEBPLAYER // Check if we are running either in the Unity editor or in a standalone build.
 
             //Get input from the input manager, round it to an integer and store in horizontal to set x axis move direction
             horizontal = (int) (Input.GetAxisRaw ("Horizontal"));
